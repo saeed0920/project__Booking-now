@@ -12,7 +12,7 @@
   align-items: center;
   height: 7rem;
   background-color: $color-white;
-  border-bottom: var(--color-Grey-light-2);
+  border-bottom: var(--line);
   font-size: 1.5rem;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .sidebar {
-  flex: 0 0 15%;
+  flex: 0 0 20%;
   background-color: var(--color-Grey-dark-1);
   display: flex;
   flex-direction: column;
@@ -32,5 +32,23 @@
 .main {
   background-color: $color-white;
   flex: 1;
-  height: 80rem;
+}
+
+.detail {
+  display: flex;
+  background-color: var(--color-Grey-light-1);
+  padding: 4.5rem;
+  border-bottom: var(--line);
+}
+
+.description {
+  font-size: 1.4rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  background-color: $color-white;
+  box-shadow: var(--box-shadow-1);
+}
+
+.user-views {
+  flex: 1;
 }
