@@ -283,11 +283,204 @@
   display: inline-block;
   cursor: pointer;
   transition: all 0.2s;
+  & span {
+    margin-left: 3px;
+    transition: margin-left 0.2s;
+  }
   &:hover {
     color: var(--color-Grey-dark-1);
-    animation: btn-ani-loop 1s infinite;
+
+    span {
+      margin-left: 8px;
+    }
   }
   &:focus {
     outline: none;
+    animation: btn-ani-loop 1s infinite;
+  }
+}
+
+////////////@at-root
+// * paraghraph
+.p:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+////////////@at-root
+// * list
+.list {
+  margin: 3rem 0;
+  padding: 3rem 0;
+  list-style: none;
+  border-bottom: var(--line);
+  border-top: var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.7rem;
+      // background-image: url(../../image/chevron-right.svg);
+
+      background-color: var(--color-primery);
+      -webkit-mask-image: url(../../image/chevron-right.svg);
+      -webkit-mask-size: cover;
+    }
+  }
+}
+////////////@at-root
+// * recomend
+.recomend {
+  font-size: 1.3rem;
+  color: var(--color-Grey-dark-3);
+  display: flex;
+  align-items: center;
+  &__count {
+    margin-right: auto;
+  }
+  &__freind {
+    &__photo {
+      box-sizing: content-box;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      border: 3px solid $color-white;
+      &:not(:last-child) {
+        margin-right: -1.5rem;
+      }
+    }
+  }
+}
+
+////////////////////////////////
+// * review
+// .user-reviews {
+// }   go to kayout
+
+.review {
+  background-color: $color-white;
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  box-shadow: var(--box-shadow-1);
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "\201C";
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    font-size: 20rem;
+    font-family: sans-serif;
+    color: var(--color-Grey-light-2);
+    line-height: 17rem;
+    z-index: 1;
+  }
+  &__text {
+    position: relative;
+    z-index: 10;
+    font-size: inherit;
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    &-photo {
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 50%;
+    }
+    &-box {
+      margin-right: auto;
+      margin-left: 1rem;
+    }
+    &-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    &-date {
+      font-size: 1.1rem;
+      color: var(--color-Grey-dark-3);
+    }
+  }
+  &__rating {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--color-primery);
+  }
+}
+
+/////////////////////////////////
+// * cta section
+
+.cta {
+  padding: 3rem 0;
+  text-align: center;
+
+  &__h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+}
+
+//////////////////////////
+// * btn-hover //amazing hover
+.btn-hover {
+  font-size: 1.5rem;
+  font-weight: 300;
+  border: none;
+  border-radius: 100px;
+  text-transform: uppercase;
+  background: linear-gradient(
+    to left,
+    var(--color-primery),
+    var(--color-secendery)
+  );
+  color: $color-white;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  & > * {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+  &__visibility {
+    padding: 2rem 7rem;
+  }
+  &__hide {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: 2rem 0rem;
+  }
+
+  &:hover {
+    background: linear-gradient(
+      to right,
+      var(--color-primery),
+      var(--color-secendery)
+    );
+  }
+
+  &:hover &__visibility {
+    transform: translateY(100%);
+  }
+  &:hover &__hide {
+    top: 0;
+  }
+  &:focus {
+    outline: none;
+    animation: btn-ani-loop 1s infinite;
   }
 }
