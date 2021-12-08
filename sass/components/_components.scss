@@ -381,12 +381,12 @@
       height: 1rem;
       margin-right: 0.7rem;
 
-      background-image: url(../../image/chevron-right.svg);
+      background-image: url(../image/chevron-right.svg);
       background-size: cover;
 
       @supports (-webkit-mask-image: url()) or (mask-image: url()) {
         background-color: var(--color-primery);
-        -webkit-mask-image: url(../../image/chevron-right.svg);
+        -webkit-mask-image: url(../image/chevron-right.svg);
         -webkit-mask-size: cover;
         background-image: none;
       }
