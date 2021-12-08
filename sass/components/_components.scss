@@ -137,11 +137,22 @@
   list-style: none;
   margin-top: 3.5rem;
 
+  @media only screen and (max-width: $br-900px) {
+    display: flex;
+    margin: 0;
+  }
+
   &__item {
     position: relative;
+    @media only screen and (max-width: $br-900px) {
+      flex: 1;
+    }
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+      @media only screen and (max-width: $br-900px) {
+        margin: 0;
+      }
     }
   }
 
@@ -179,6 +190,10 @@
     align-items: center;
     position: relative;
     z-index: 10;
+    @media only screen and (max-width: $br-900px) {
+      justify-content: center;
+      padding: 2rem;
+    }
   }
   &__icon {
     fill: currentColor;
@@ -195,6 +210,9 @@
   text-align: center;
   padding: 2rem;
   color: var(--color-Grey-light-4);
+  @media only screen and (max-width: $br-900px) {
+    display: none;
+  }
 }
 
 // ! main
@@ -344,6 +362,7 @@
     margin-right: auto;
   }
   &__freind {
+    display: flex;
     &__photo {
       box-sizing: content-box;
       width: 4rem;
@@ -351,7 +370,7 @@
       border-radius: 50%;
       border: 3px solid $color-white;
       &:not(:last-child) {
-        margin-right: -1.5rem;
+        margin-right: -2rem;
       }
     }
   }
@@ -369,6 +388,10 @@
   box-shadow: var(--box-shadow-1);
   position: relative;
   overflow: hidden;
+  @media only screen and (max-width: $br-900px) {
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+  }
   &::before {
     content: "\201C";
     position: absolute;
@@ -422,7 +445,9 @@
 .cta {
   padding: 3rem 0;
   text-align: center;
-
+  @media only screen and (max-width: $br-900px) {
+    padding: 2rem;
+  }
   &__h2 {
     font-size: 2rem;
     font-weight: 600;
@@ -457,12 +482,18 @@
   }
   &__visibility {
     padding: 2rem 7rem;
+    @media only screen and (max-width: $br-900px) {
+      padding: 1.5rem 5rem;
+    }
   }
   &__hide {
     position: absolute;
     top: -100%;
     left: 0;
     padding: 2rem 0rem;
+    @media only screen and (max-width: $br-900px) {
+      padding: 1.5rem 0;
+    }
   }
 
   &:hover {
