@@ -37,6 +37,12 @@ html {
   @media only screen and (max-width: $br-1100px) {
     font-size: 50%;
   }
+  @media only screen and (max-width: $br-600px) {
+    font-size: 43%;
+  }
+  @media only screen and (max-width: $br-440px) {
+    font-size: 36%;
+  }
 }
 body {
   font-family: "Open Sans", sans-serif;

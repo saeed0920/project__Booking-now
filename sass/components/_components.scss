@@ -17,6 +17,9 @@
     transition: all 0.2s;
     backface-visibility: hidden;
     transform: scale(1.1);
+    @media only screen and (max-width: $br-440px) {
+      font-size: 1.4rem;
+    }
 
     &:hover {
       transform: scale(1.2);
@@ -36,6 +39,9 @@
   justify-content: center;
   align-items: center;
   flex: 0 0 40%;
+  @media only screen and (max-width: $br-400px) {
+    flex: 0 0 30%;
+  }
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -75,6 +81,10 @@
     height: 2rem;
     width: 2rem;
     fill: var(--color-Grey-dark-3);
+    @media only screen and (max-width: $br-400px) {
+      height: 1.7rem;
+      width: 1.7rem;
+    }
   }
 }
 // ********************************************
@@ -194,12 +204,19 @@
       justify-content: center;
       padding: 2rem;
     }
+    @media only screen and (max-width: $br-600px) {
+      flex-direction: column;
+    }
   }
   &__icon {
     fill: currentColor;
     margin-right: 2rem;
     width: 2rem;
     height: 2rem;
+    @media only screen and (max-width: $br-600px) {
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+    }
   }
 }
 // ********************************************
@@ -229,6 +246,8 @@
   &__photo {
     width: 100%;
     display: block;
+    @media only screen and (max-width: $br-440px) {
+    }
   }
 }
 
@@ -244,6 +263,15 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+    @media only screen and (max-width: $br-600px) {
+      font-size: 2rem;
+      padding: 1.5rem 2.5rem;
+    }
+
+    @media only screen and (max-width: $br-400px) {
+      font-size: 1.6rem;
+      padding: 1.25rem 2rem;
+    }
   }
   &__starts {
     display: flex;
@@ -269,16 +297,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    @media only screen and (max-width: $br-400px) {
+      padding: 0 1.25rem;
+      // margin-left: 2rem;
+    }
     &-avg {
       font-size: 2.5rem;
       font-weight: 500;
       margin-bottom: -4px;
+      @media only screen and (max-width: $br-440px) {
+        font-size: 1.8rem;
+      }
     }
     &-count {
       font-size: 1rem;
       font-weight: 300;
       text-transform: uppercase;
+      @media only screen and (max-width: $br-440px) {
+        font-size: 0.8rem;
+      }
     }
   }
   &__svg--star,
@@ -391,6 +428,9 @@
   @media only screen and (max-width: $br-900px) {
     padding: 2rem;
     margin-bottom: 2.5rem;
+  }
+  @media only screen and (max-width: $br-600px) {
+    width: 100%;
   }
   &::before {
     content: "\201C";
