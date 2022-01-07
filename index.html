@@ -16,7 +16,11 @@
   <body>
     <div class="container">
       <header class="header">
-        <a href="#" class="a home-link">Home</a>
+        <a
+          href="https://saeed0920.github.io/start-css-modern-project/"
+          class="a home-link"
+          >Home</a
+        >
         <form action="#" class="search">
           <input type="text" class="search__input" placeholder="Search Tours" />
           <button class="search__button">
@@ -24,6 +28,59 @@
               <use xlink:href="image/sprite.svg#icon-zoom-outline"></use>
             </svg>
           </button>
+          <!-- effect for focus input  -->
+          <!-- * 1 -->
+          <div class="search__offers">
+            <div class="search__offers__Specifications">
+              <svg class="search__offers__icon">
+                <use xlink:href="./image/sprite.svg#icon-time"></use>
+              </svg>
+              <div class="search__offers__name-hotel">
+                Hotel Adlon Kempinski Berlin
+              </div>
+              <div class="search__offers__starts">
+                <svg class="search__offers__icon-stars">
+                  <use xlink:href="./image/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="search__offers__icon-stars">
+                  <use xlink:href="./image/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="search__offers__icon-stars">
+                  <use xlink:href="./image/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="search__offers__icon-stars">
+                  <use xlink:href="./image/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="search__offers__icon-stars">
+                  <use xlink:href="./image/sprite.svg#icon-star"></use>
+                </svg>
+              </div>
+            </div>
+            <!-- * 2  -->
+            <div class="search__offers__Specifications">
+              <svg class="search__offers__icon">
+                <use xlink:href="./image/sprite.svg#icon-time"></use>
+              </svg>
+              <div class="search__offers__name-hotel">
+                The Ritz-Carlton, Berlin
+              </div>
+              <div class="search__offers__starts">
+                <svg class="search__offers__icon-stars">
+                  <use xlink:href="./image/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="search__offers__icon-stars">
+                  <use xlink:href="./image/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="search__offers__icon-stars">
+                  <use xlink:href="./image/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="search__offers__icon-stars">
+                  <use xlink:href="./image/sprite.svg#icon-star"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <!-- finish efect   -->
         </form>
         <nav class="user-nav">
           <div class="user-nav__icon-box">
@@ -45,6 +102,30 @@
               alt="photo-user"
             />
             <span class="user-nav__user-name">Saeed</span>
+            <!--  effect hover for user  -->
+            <div class="hover-card">
+              <ul class="hover-card__list">
+                <li class="hover-card__item">
+                  <a href="#" class="hover-card__link">Profile</a>
+                </li>
+                <li class="hover-card__item">
+                  <svg class="hover-card__icon">
+                    <use xlink:href="./image/sprite.svg#icon-cog-outline"></use>
+                  </svg>
+                  <a href="#" class="hover-card__link">Settings</a>
+                </li>
+                <li class="hover-card__item">
+                  <svg class="hover-card__icon">
+                    <use
+                      xlink:href="./image/sprite.svg#icon-export-outline"
+                    ></use>
+                  </svg>
+                  <a href="#" class="hover-card__link">Log out</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- finish effect hover  -->
           </div>
         </nav>
       </header>
@@ -88,7 +169,7 @@
             </li>
           </ul>
           <div class="copy-right">
-            &copy; 2022 by Saeed0920. All Rights reserved.
+            &copy; 2021 by Saeed0920. All Rights reserved.
           </div>
         </nav>
         <main class="main">

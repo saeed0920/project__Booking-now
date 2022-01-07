@@ -61,18 +61,23 @@
       outline: none;
       width: 100%;
       background-color: var(--color-Grey-light-3);
+      border-radius: 3px;
     }
   }
   &__input:focus ~ &__button {
     background-color: var(--color-Grey-light-3);
+  }
+  &__input:placeholder-shown ~ &__offers {
+    transform: translateY(-20%);
+    opacity: 0;
+    pointer-events: none;
   }
   &__button {
     cursor: pointer;
     border: none;
     background-color: var(--color-Grey-light-2);
     &:focus {
-      //   background-color: var(--color-Grey-light-3);
-
+      background-color: var(--color-Grey-light-3);
       outline: none;
     }
   }
@@ -86,7 +91,56 @@
       width: 1.7rem;
     }
   }
+
+  //  offers //
+  position: relative;
+  &__offers {
+    z-index: 30;
+    transform-origin: top;
+    transition: all 0.3s 0.2s;
+    border-radius: 4px;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    transform: translateX(0.25rem);
+    padding: 0.5rem 1rem;
+    background-color: #e1275f;
+
+    &__Specifications {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.2s;
+      border-radius: 2rem;
+      padding: 0.2rem 0.5rem;
+      color: rgba($color-white, 0.8);
+      &:hover {
+        cursor: pointer;
+        color: $color-white;
+      }
+    }
+    &__icon {
+      width: 2rem;
+      height: 2rem;
+      fill: $color-text-white;
+      transform: translateX(-1rem);
+    }
+    &__name-hotel {
+      color: inherit;
+      margin-right: auto;
+
+      margin-left: -0.5rem;
+    }
+    &__starts {
+    }
+    &__icon-stars {
+      fill: #fffa65;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
 }
+
 // ********************************************
 /////////////////////////////////////////////
 // user-nav
@@ -128,6 +182,26 @@
     align-items: center;
   }
   &__user {
+    position: relative;
+    &::after {
+      content: "";
+      border-bottom: 3px solid var(--color-primery);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: scalex(0);
+      transition: all 0.2s;
+    }
+    &:hover::after {
+      transform: scale(1);
+    }
+
+    &:hover .hover-card {
+      transform: scaleY(1);
+      pointer-events: all;
+    }
   }
   &__user-photo {
     height: 4rem;
@@ -136,6 +210,63 @@
   }
   &__user-name {
     font-family: inherit;
+  }
+}
+////////////////////////////////////// *****
+// hover-card
+
+.hover-card {
+  z-index: 20;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-size: 1.6rem;
+  width: 100%;
+  backface-visibility: hidden;
+  // height: 0;
+  font-family: inherit;
+  // opacity: 0;
+  transform: scaleY(0);
+  pointer-events: none;
+  border-radius: 1px;
+  box-shadow: 0 1rem 4rem rgba($color-black, 0.15);
+  transform-origin: top;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  background-color: #e1275f;
+  transition: all 0.2s 0.1s;
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s;
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 1rem 4rem rgba($color-black, 0.15);
+    }
+
+    &:last-child .hover-card__icon {
+      transform: translateX(-0.8rem);
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: $color-white;
+  }
+  &__icon {
+    transform: translateX(-0.5rem);
+    width: 2rem;
+    height: 2rem;
+    fill: $color-white;
   }
 }
 
